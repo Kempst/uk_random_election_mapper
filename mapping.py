@@ -118,8 +118,8 @@ def save_results(filename, original_winners, random_winners, second_place, rando
             })
 
 def main():
-    input_filename = 'D:/python_projects/Election2/election_data.csv'  # Replace with your CSV file path
-    output_filename = 'D:/python_projects/Election2/election_results.csv'  # Output CSV file path
+    input_filename = 'election_data.csv'  # Replace with your CSV file path
+    output_filename = 'election_results.csv'  # Output CSV file path
     
     candidates_to_check = ['Keir Starmer', 'Rishi Sunak', 'Ed Davey', 'Stephen Flynn', 'Nigel Farage', 'Jacob Rees-Mogg', 'Liz Truss', 'Lindsay Hoyle']  # Add more names as needed
     
@@ -165,11 +165,11 @@ if __name__ == "__main__":
 
 
 # Load the CSV file
-csv_path = r'D:\python_projects\Election2\election_results.csv'
+csv_path = r'election_results.csv'
 data = pd.read_csv(csv_path)
 
 # Load the shapefile
-shapefile_path = r'D:\python_projects\Election2\uk-constituencies-2024-21-june-24.shp'
+shapefile_path = r'uk-constituencies-2024-21-june-24.shp'
 gdf = gpd.read_file(shapefile_path)
 
 # Merge the data with the shapefile on "Name" instead of "Constituency"
